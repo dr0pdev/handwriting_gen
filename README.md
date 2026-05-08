@@ -166,22 +166,6 @@ python generate.py \
 | `--eta` | `0.0` | DDIM stochasticity (0=deterministic) |
 | `--no_crop` | off | Keep full padded line width |
 
----
-
-## Differences from the Original DiffBrush Repo
-
-| Aspect | Original | This repo |
-|--------|----------|-----------|
-| Training script | **Missing** | Included (`train.py`) |
-| `binarize()` in loss.py | Bug: `T = T.device` | Fixed |
-| `get_style_ref` return | Missing return statement | Fixed |
-| Device support | CUDA only (forced gloo) | CUDA / MPS / CPU auto-detect |
-| Distributed training | Required (`dist.init_process_group`) | Optional |
-| Dataset modules | Two files (base + IAM) | One merged module |
-| Config system | Large legacy `parse_config.py` | Clean YAML + AttrDict |
-
----
-
 ## Citation
 
 ```bibtex
