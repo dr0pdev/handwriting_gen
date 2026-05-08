@@ -1,0 +1,34 @@
+[project]
+name = "handwriting-gen"
+version = "0.1.0"
+description = "Handwritten text-line generation using latent diffusion with style-content conditioning"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.2.0",
+    "torchvision>=0.17.0",
+    "diffusers>=0.29.0",
+    "einops>=0.8.0",
+    "easydict>=1.13",
+    "pyyaml>=6.0",
+    "opencv-python>=4.10.0",
+    "tqdm>=4.67.0",
+    "packaging>=24.0",
+    "six>=1.17.0",
+    "omegaconf>=2.3.0",
+    "numpy>=1.24.0",
+    "pillow>=10.0.0",
+    "scikit-learn>=1.3.0",
+    "safetensors>=0.4.0",
+    "huggingface-hub>=0.27.0",
+    "accelerate>=0.30.0",
+    "wandb>=0.19.0",
+    "transformers>=4.40.0",
+]
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.uv]
+package = false
